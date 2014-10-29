@@ -44,8 +44,10 @@ class OdooGtk(object):
         port = self.builder.get_object('port_input').get_text()
         print "connecting to " + server +":"+ port
         oerp = oerplib.OERP(server=server, port=port)
-        print oerp.db.list()
-        
+        dbs = oerp.db.list()
+        print dbs
+        combo = self.builder.get_object('db_chose')
+#        combo.add_attribute(, 'ubuntu', 0)
 
 
 
